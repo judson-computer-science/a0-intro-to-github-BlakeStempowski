@@ -1,0 +1,171 @@
+﻿Blake Stempowski
+Assigment A2.Gnu Utilities1
+09/24/2024
+CSC104 FA 2024
+Follow the 5 youtube videos on beginner to linux command line
+
+
+
+ubuntu@ubuntu:~$ pwd
+/home/ubuntu
+ubuntu@ubuntu:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+ubuntu@ubuntu:~$ cd
+ubuntu@ubuntu:~$ cd /
+ubuntu@ubuntu:/$ ls
+bin                dev   lib64              opt   run                 srv  var
+bin.usr-is-merged  etc   lib.usr-is-merged  proc  sbin                sys
+boot               home  media              rofs  sbin.usr-is-merged  tmp
+cdrom              lib   mnt                root  snap                usr
+
+ubuntu@ubuntu:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+ubuntu@ubuntu:~$ ls Documents/
+ubuntu@ubuntu:~$ ls Downloads/
+ubuntu@ubuntu:~$ ls /
+bin                dev   lib64              opt   run                 srv  var
+bin.usr-is-merged  etc   lib.usr-is-merged  proc  sbin                sys
+boot               home  media              rofs  sbin.usr-is-merged  tmp
+cdrom              lib   mnt                root  snap                usr
+ubuntu@ubuntu:~$ pwd
+/home/ubuntu
+ubuntu@ubuntu:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+
+ubuntu@ubuntu:~$ ls ~
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+ubuntu@ubuntu:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+ubuntu@ubuntu:~$ pwd
+/home/ubuntu
+ubuntu@ubuntu:~$ ls /home/ubuntu
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+ubuntu@ubuntu:~$ ls ..
+installer  ubuntu
+ubuntu@ubuntu:~$ ls ../..
+bin                dev   lib64              opt   run                 srv  var
+bin.usr-is-merged  etc   lib.usr-is-merged  proc  sbin                sys
+boot               home  media              rofs  sbin.usr-is-merged  tmp
+cdrom              lib   mnt                root  snap                usr
+ubuntu@ubuntu:~$ 
+
+ubuntu@ubuntu:~$ ls -l
+total 0
+drwxr-xr-x 2 ubuntu ubuntu  60 Sep 27 23:46 Desktop
+drwxr-xr-x 2 ubuntu ubuntu  40 Sep 27 23:47 Documents
+drwxr-xr-x 2 ubuntu ubuntu  40 Sep 27 23:47 Downloads
+drwxr-xr-x 2 ubuntu ubuntu  40 Sep 27 23:47 Music
+drwxr-xr-x 2 ubuntu ubuntu  40 Sep 27 23:47 Pictures
+drwxr-xr-x 2 ubuntu ubuntu  40 Sep 27 23:47 Public
+drwx------ 6 ubuntu ubuntu 120 Sep 28 00:00 snap
+drwxr-xr-x 2 ubuntu ubuntu  40 Sep 27 23:47 Templates
+drwxr-xr-x 2 ubuntu ubuntu  40 Sep 27 23:47 Videos
+ubuntu@ubuntu:~$ ls -al
+total 12
+drwxr-x--- 15 ubuntu ubuntu  380 Sep 27 23:47 .
+drwxr-xr-x  1 root   root     80 Sep 27 23:47 ..
+-rw-r--r--  1 ubuntu ubuntu  220 Sep 27 23:46 .bash_logout
+-rw-r--r--  1 ubuntu ubuntu 3771 Sep 27 23:46 .bashrc
+drwx------ 11 ubuntu ubuntu  240 Sep 28 00:31 .cache
+drwxr-xr-x 13 ubuntu ubuntu  420 Sep 28 00:33 .config
+drwxr-xr-x  2 ubuntu ubuntu   60 Sep 27 23:46 Desktop
+drwxr-xr-x  2 ubuntu ubuntu   40 Sep 27 23:47 Documents
+drwxr-xr-x  2 ubuntu ubuntu   40 Sep 27 23:47 Downloads
+drwx------  2 ubuntu ubuntu   40 Sep 27 23:46 .gvfs
+drwx------  4 ubuntu ubuntu   80 Sep 27 23:47 .local
+drwxr-xr-x  2 ubuntu ubuntu   40 Sep 27 23:47 Music
+drwxr-xr-x  2 ubuntu ubuntu   40 Sep 27 23:47 Pictures
+-rw-r--r--  1 ubuntu ubuntu  807 Sep 27 23:46 .profile
+drwxr-xr-x  2 ubuntu ubuntu   40 Sep 27 23:47 Public
+drwx------  6 ubuntu ubuntu  120 Sep 28 00:00 snap
+-rw-r--r--  1 ubuntu ubuntu    0 Sep 27 23:47 .sudo_as_admin_successful
+drwxr-xr-x  2 ubuntu ubuntu   40 Sep 27 23:47 Templates
+drwxr-xr-x  2 ubuntu ubuntu   40 Sep 27 23:47 Videos
+
+ubuntu@ubuntu:~$ man ls
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about  the FILEs (the current directory by default).
+       Sort entries alphabetically if none of -cftuvSUX nor --sort  is  speci‐
+       fied.
+
+ubuntu@ubuntu:~$ cd
+ubuntu@ubuntu:~$ cd /
+ubuntu@ubuntu:/$ pwd
+/
+ubuntu@ubuntu:/$ pwd
+/
+ubuntu@ubuntu:/$ cd ~
+ubuntu@ubuntu:~$ pwd
+/home/ubuntu
+ubuntu@ubuntu:~$ cd ..
+ubuntu@ubuntu:/home$ ls
+installer  ubuntu
+ubuntu@ubuntu:/home$ cd
+ubuntu@ubuntu:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+
+ubuntu@ubuntu:~$ cd Documents/
+ubuntu@ubuntu:~/Documents$ cd
+ubuntu@ubuntu:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+ubuntu@ubuntu:~$ cd Documents/
+ubuntu@ubuntu:~/Documents$ ls
+
+ubuntu@ubuntu:~/Documents$ cat
+Hello world
+Hello world
+echo input
+echo input
+ls
+ls
+ubuntu@ubuntu:~/Documents$ ls
+ubuntu@ubuntu:~/Documents$ cd
+ubuntu@ubuntu:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+ubuntu@ubuntu:~$ 
+
+man cat
+CAT(1)                           User Commands                          CAT(1)
+
+NAME
+       cat - concatenate files and print on the standard output
+
+SYNOPSIS
+       cat [OPTION]... [FILE]...
+
+DESCRIPTION
+       Concatenate FILE(s) to standard output.
+
+       With no FILE, or when FILE is -, read standard input.
+
+ubuntu@ubuntu:~$ cat > test.txt
+line 1
+line 2
+line 3
+ubuntu@ubuntu:~$ cat test.txt
+line 1
+line 2
+line 3
+ubuntu@ubuntu:~$ cat > test.txt
+line 4
+line 5
+line 6
+ubuntu@ubuntu:~$ cat >> test.txt
+line 7
+line 8
+line 9
+ubuntu@ubuntu:~$ cat test.txt
+line 4
+line 5
+line 6
+line 7
+line 8
+line 9
+
+
